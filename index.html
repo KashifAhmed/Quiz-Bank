@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="quizBank">
+<head>
+    <title></title>
+    <!--Libraries-->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="directives/abn_tree_directive.js"></script>
+
+    <!--Controllers-->
+    <script src="controllers/quesitonTree.js"></script>
+    <script src="controllers/addQuestion.js"></script>
+    <script src="controllers/createQuiz.js"></script>
+    <!--For using Ng-Animate-->
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="app/app.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!--Style-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assests/css/abn_tree.css"/>
+    <link rel="stylesheet" href="assests/css/style.css">
+
+</head>
+<body>
+    <div ng-view></div>
+</body>
+</html>

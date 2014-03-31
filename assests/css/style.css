@@ -1,0 +1,13 @@
+.popup_center{
+    position: absolute;
+    max-height: 300px;
+    min-height: 200px;
+    top:0;left: 0;right: 0;bottom: 0;
+    margin:auto;
+}
+.question_table{
+    margin: 10%;
+}
+.question_table tr{
+
+}

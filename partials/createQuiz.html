@@ -1,0 +1,113 @@
+<!--TRANSPARENT BG-->
+<div class="bg-warning" style="position: absolute; height: 100%; width: 100%; background: rgba(0,0,0, 0.2);"></div>
+{{abc}}
+<div class="text-center">
+    <button class="btn-primary" ng-click="bestAns()">Best answer</button>
+
+    <button class=" btn-primary" ng-click="multAns()">Multiple Choise</button>
+
+    <button class="btn-primary" ng-click="trueFalse()">True/False</button>
+
+    <button class="btn-primary" >Matching</button>
+</div>
+
+<div class="table-bordered col-lg-12" style="min-height: 200px; max-height: 250px;margin-top: 20px; overflow-y: auto;" >
+    <ul>
+        <li ng-repeat="item in items">
+            {{item.name}}
+        </li>
+    </ul>
+</div>
+
+
+<!--BEST ANSWER-->
+<span class=" col-md-6 bg-danger popup_center">
+            <table class="table-responsive question_table">
+                <tr>
+                    <td>Question : </td>
+                    <td colspan="2">
+                        <input type="text" style="width: 300px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Option 1 : </td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Option 2 : </td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Option 3 : </td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Option 4 : </td>
+                    <td><input type="text"/></td>
+                </tr>
+            </table>
+            <div>
+                <button class="col-md-2 col-md-offset-3 btn-primary ">Submit</button>
+                <button class="col-md-2 col-md-offset-1 bg-info btn-danger">Cencel</button>
+            </div>
+        </span>
+
+<!--Multiple Choise-->
+<span class=" col-md-6 bg-danger hidden">
+            <table class="table-responsive">
+                <tr>
+                    <td>Question : </td>
+                    <td colspan="2">
+                        <input type="text" style="width: 300px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Option 1 : </td>
+                    <td><input type="text"/></td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>Option 2 : </td>
+                    <td><input type="text"/></td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>Option 3 : </td>
+                    <td><input type="text"/></td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>Option 4 : </td>
+                    <td><input type="text"/></td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+            </table>
+            <button class="col-md-2 col-md-offset-3 btn-primary ">Submit</button>
+            <button class="col-md-2 col-md-offset-1 bg-info btn-danger">Cencel</button>
+        </span>
+
+<!--TRUE FALSE-->
+
+<span class=" col-md-6 bg-danger hidden ">
+            <table class="table-responsive">
+                <tr>
+                    <td>Question : </td>
+                    <td colspan="4">
+                        <input type="text" style="width: 300px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TRUE</td>
+                    <td>
+                        <input type="radio" name="true_false" />
+                    </td>
+                    <td>FALSE</td>
+                    <td>
+                        <input type="radio" name="true_false"/>
+                    </td>
+                </tr>
+
+            </table>
+            <button class="col-md-2 col-md-offset-3 btn-primary ">Submit</button>
+            <button class="col-md-2 col-md-offset-1 bg-info btn-danger">Cencel</button>
+        </span>
