@@ -11,3 +11,15 @@
 .question_table tr{
 
 }
+.question_collection_table{
+    min-height: 200px;
+    max-height: 250px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+.full_trans_bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, 0.2);
+}
