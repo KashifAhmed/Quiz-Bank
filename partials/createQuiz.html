@@ -1,13 +1,14 @@
 <!--TRANSPARENT BG-->
-<div class="bg-warning full_trans_bg hidden" ></div>
+<div ng-class="hideBestAnsDiv" class="bg-warning full_trans_bg" ></div>
 <!--DESCRIPTION-->
+<a href="#/questionTree"> Question Tree</a>
 <div class="col-md-12 bg-info ">
     <h1>QUIZ TITLE</h1>
     <p>Quiz Description</p>
     <h4>Category : ABC </h4>
 </div>
 <div class="text-center">
-    <button class="btn-primary" ng-click="bestAns()">Best answer</button>
+    <button class="btn-primary" ng-click="hideBestAnsDiv=''">Best answer</button>
 
     <button class=" btn-primary" ng-click="multAns()">Multiple Choise</button>
 
@@ -27,34 +28,34 @@
 
 
 <!--BEST ANSWER-->
-<span class=" col-md-6 bg-danger popup_center hidden">
+<span ng-class="hideBestAnsDiv" class="col-md-6 bg-danger popup_center hideBestAnsDiv">
             <table class="table-responsive question_table">
                 <tr>
                     <td>Question : </td>
                     <td colspan="2">
-                        <input type="text" style="width: 300px;"/>
+                        <input ng-model="b_a_ques" type="text" style="width: 300px;"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Option 1 : </td>
-                    <td><input type="text"/></td>
+                    <td><input ng-model="b_a_opt1" type="text"/></td>
                 </tr>
                 <tr>
                     <td>Option 2 : </td>
-                    <td><input type="text"/></td>
+                    <td><input ng-model="b_a_opt2" type="text"/></td>
                 </tr>
                 <tr>
                     <td>Option 3 : </td>
-                    <td><input type="text"/></td>
+                    <td><input ng-model="b_a_opt3" type="text"/></td>
                 </tr>
                 <tr>
                     <td>Option 4 : </td>
-                    <td><input type="text"/></td>
+                    <td><input ng-model="b_a_opt4" type="text"/></td>
                 </tr>
             </table>
             <div>
-                <button class="col-md-2 col-md-offset-3 btn-primary ">Submit</button>
-                <button class="col-md-2 col-md-offset-1 bg-info btn-danger">Cencel</button>
+                <button ng-click="submit_best_ans(); hideBestAnsDiv='hideBestAnsDiv'" class="col-md-2 col-md-offset-3 btn-primary">Submit</button>
+                <button class="col-md-2 col-md-offset-1 bg-info btn-danger" ng-click="hideBestAnsDiv='hideBestAnsDiv'">Cencel</button>
             </div>
         </span>
 
@@ -117,3 +118,5 @@
             <button class="col-md-2 col-md-offset-3 btn-primary ">Submit</button>
             <button class="col-md-2 col-md-offset-1 bg-info btn-danger">Cencel</button>
         </span>
+
+        

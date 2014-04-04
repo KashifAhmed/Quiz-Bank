@@ -28,4 +28,4 @@ angular.module('quizBank',depInj)
                 templateUrl:'partials/addQuestion.html',
                 controller:"getQuestion"
             });
-    }])
+    }]);
