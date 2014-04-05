@@ -1,5 +1,5 @@
 <!--TRANSPARENT BG-->
-<div ng-class="hideBestAnsDiv" class="bg-warning full_trans_bg" ></div>
+<div ng-class="createForm" class="bg-warning full_trans_bg" ></div>
 <!--DESCRIPTION-->
 <a href="#/questionTree"> Question Tree</a>
 <div class="col-md-12 bg-info ">
@@ -8,7 +8,7 @@
     <h4>Category : ABC </h4>
 </div>
 <div class="text-center">
-    <button class="btn-primary" ng-click="hideBestAnsDiv=''">Best answer</button>
+    <button class="btn-primary" ng-click="best_ans()">Best answer</button>
 
     <button class=" btn-primary" ng-click="multAns()">Multiple Choise</button>
 
@@ -20,15 +20,22 @@
         <!--QUIZ TABLE-->
 <div class="bg-success col-lg-12 question_collection_table">
     <ul>
-        <li ng-repeat="item in items">
-            {{item.name}}
+        <li class="table-bordered top_bottom_margin" ng-repeat="question in questions">
+            {{question.label}}
+                <ul>
+                    <li ng-repeat="opt in question.opts track by $index">
+                            {{opt}}
+                    </li>
+                </ul>
         </li>
+
     </ul>
 </div>
 
 
 <!--BEST ANSWER-->
-<span ng-class="hideBestAnsDiv" class="col-md-6 bg-danger popup_center hideBestAnsDiv">
+<span ng-class="createForm" class="col-md-6 bg-danger popup_center hideBestAnsDiv">
+            <h2 style="position: absolute">{{title}}</h2>
             <table class="table-responsive question_table">
                 <tr>
                     <td>Question : </td>
@@ -36,87 +43,10 @@
                         <input ng-model="b_a_ques" type="text" style="width: 300px;"/>
                     </td>
                 </tr>
-                <tr>
-                    <td>Option 1 : </td>
-                    <td><input ng-model="b_a_opt1" type="text"/></td>
-                </tr>
-                <tr>
-                    <td>Option 2 : </td>
-                    <td><input ng-model="b_a_opt2" type="text"/></td>
-                </tr>
-                <tr>
-                    <td>Option 3 : </td>
-                    <td><input ng-model="b_a_opt3" type="text"/></td>
-                </tr>
-                <tr>
-                    <td>Option 4 : </td>
-                    <td><input ng-model="b_a_opt4" type="text"/></td>
-                </tr>
+
             </table>
             <div>
-                <button ng-click="submit_best_ans(); hideBestAnsDiv='hideBestAnsDiv'" class="col-md-2 col-md-offset-3 btn-primary">Submit</button>
-                <button class="col-md-2 col-md-offset-1 bg-info btn-danger" ng-click="hideBestAnsDiv='hideBestAnsDiv'">Cencel</button>
+                <button ng-click="createForm='hideBestAnsDiv'" class="col-md-2 col-md-offset-3 btn-primary">Submit</button>
+                <button class="col-md-2 col-md-offset-1 bg-info btn-danger" ng-click="createForm='hideBestAnsDiv'">Cencel</button>
             </div>
         </span>
-
-<!--Multiple Choise-->
-<span class=" col-md-6 bg-danger hidden">
-            <table class="table-responsive">
-                <tr>
-                    <td>Question : </td>
-                    <td colspan="2">
-                        <input type="text" style="width: 300px;"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Option 1 : </td>
-                    <td><input type="text"/></td>
-                    <td><input type="checkbox"/></td>
-                </tr>
-                <tr>
-                    <td>Option 2 : </td>
-                    <td><input type="text"/></td>
-                    <td><input type="checkbox"/></td>
-                </tr>
-                <tr>
-                    <td>Option 3 : </td>
-                    <td><input type="text"/></td>
-                    <td><input type="checkbox"/></td>
-                </tr>
-                <tr>
-                    <td>Option 4 : </td>
-                    <td><input type="text"/></td>
-                    <td><input type="checkbox"/></td>
-                </tr>
-            </table>
-            <button class="col-md-2 col-md-offset-3 btn-primary ">Submit</button>
-            <button class="col-md-2 col-md-offset-1 bg-info btn-danger">Cencel</button>
-        </span>
-
-<!--TRUE FALSE-->
-
-<span class=" col-md-6 bg-danger hidden ">
-            <table class="table-responsive">
-                <tr>
-                    <td>Question : </td>
-                    <td colspan="4">
-                        <input type="text" style="width: 300px;"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>TRUE</td>
-                    <td>
-                        <input type="radio" name="true_false" />
-                    </td>
-                    <td>FALSE</td>
-                    <td>
-                        <input type="radio" name="true_false"/>
-                    </td>
-                </tr>
-
-            </table>
-            <button class="col-md-2 col-md-offset-3 btn-primary ">Submit</button>
-            <button class="col-md-2 col-md-offset-1 bg-info btn-danger">Cencel</button>
-        </span>
-
-        

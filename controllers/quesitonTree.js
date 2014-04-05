@@ -7,6 +7,8 @@ angular.module('questionTree',['bestAns'])
         $scope.my_data = best_ans_bank;
         // $scope.my_tree = tree = {};
         $scope.my_tree_handler = function(sel){
+
             $scope.output = "You are Selecting : "+sel.label;
+
         }
     })

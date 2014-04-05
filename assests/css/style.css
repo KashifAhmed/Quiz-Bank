@@ -33,3 +33,7 @@
 .hideBestAnsDiv{
     display: none;
 }
+.top_bottom_margin{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
